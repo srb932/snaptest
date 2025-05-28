@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Code Parrainage - Snap+</title>
+  <style>
+    body {
+      background: #fffc00;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+    }
+
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      width: 250px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    button {
+      background: black;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .message {
+      margin-top: 20px;
+      color: green;
+      font-size: 18px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Entre ton code de connexion afin d'être connecté avec ton pote et partager Snap+ 😎</h2>
+    <input type="text" id="code" placeholder="Code de parrainage ou de connexion...">
+    <button onclick="validerCode()">Valider</button>
+    <div class="message" id="msg">🎉 Code validé ! Tu as gagné Snap+ gratuitement !</div>
+  </div>
+
+  <script>
+    function validerCode() {
+      const code = document.getElementById('code').value.trim();
+      if (code !== "") {
+        document.getElementById('msg').style.display = "block";
+      } else {
+        alert("Merci de saisir un code !");
+      }
+    }
+  </script>
+
+</body>
+</html>
